@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taquísimo | Tacos & Burritos</title>
+
+  <!-- SEO Básico -->
+  <meta name="description" content="Taquísimo - Los tacos y burritos más sabrosos de Aguadilla, Puerto Rico. Promociones diarias, menú completo y más. ¡Ordena ya por WhatsApp!">
+  <meta name="keywords" content="tacos, burritos, Aguadilla, Taquísimo, comida mexicana, taquería en PR, menú, especiales">
+  <meta name="author" content="Taquísimo & Norvak">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Taquísimo | Tacos y Burritos 🔥 en Aguadilla, PR">
+  <meta property="og:description" content="Descubre los tacos más sabrosos del oeste. Promos, menú, ubicación y más.">
+  <meta property="og:image" content="https://i.postimg.cc/bwyrD2bF/taquisimo-logo.jpg">
+  <meta property="og:url" content="https://tu-dominio.com">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_PR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Taquísimo 🌮🔥">
+  <meta name="twitter:description" content="Los tacos y burritos más sabrosos de Aguadilla, PR.">
+  <meta name="twitter:image" content="https://i.postimg.cc/bwyrD2bF/taquisimo-logo.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://i.postimg.cc/FHkTvJCG/taquisimo-nobg.png" type="image/png">
+  <link rel="shortcut icon" href="https://i.postimg.cc/FHkTvJCG/taquisimo-nobg.png" type="image/png">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <div class="hero-content">
+      <img src="img/taquisimo-nobg.png" alt="Logo Taquísimo" class="logo">
+      <h1>¡Bienvenido a Taquísimo!</h1>
+      <p>Lo que tu paladar estaba esperando.</p>
+      <a href="https://wa.me/7873079021" class="btn" target="_blank" rel="noopener noreferrer">Ordena Ya</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- PROMOCIONES -->
+    <section class="promos">
+      <h2>🔥 Promociones 🔥</h2>
+      <div class="promo-card">
+        <img src="img/tacos.jpg" alt="Taco Icon" class="promo-img">
+        <p><strong>Taco Tuesday:</strong> ¡Tacos a $1 todo el día!</p>
+      </div>
+      <div class="promo-card">
+        <img src="img/burritos.jpg" alt="Burrito Icon" class="promo-img">
+        <p><strong>Burrito Lunes y Jueves:</strong> Burritos a $4</p>
+      </div>
+    </section>
+
+    <!-- MENÚ COMO POP-UP -->
+    <section class="menu-popup">
+      <h2>¿Orden por teléfono? Aquí tenemos el Menú completo.</h2>
+      <button id="open-menu" class="btn" aria-label="Abrir el menú">Menú</button>
+
+      <div id="menu-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+
+          <section class="menu-table">
+            <h2>Menú Taquísimo</h2>
+            <div class="table-wrapper">
+              <!-- Combos -->
+              <table>
+                <thead><tr><th>Combos</th><th>Precio</th></tr></thead>
+                <tbody>
+                  <tr><td>#1 – 4 Tacos</td><td>$8.25</td></tr>
+                  <tr><td>#2 – 3 Tacos</td><td>$7.25</td></tr>
+                  <tr><td>#3 – Big Burrito</td><td>$9.25</td></tr>
+                  <tr><td>#4 – Burrito</td><td>$9.00</td></tr>
+                  <tr><td colspan="2"><em>Escoge entre Pollo • Carnitas • Veggie</em></td></tr>
+                </tbody>
+              </table>
+
+              <!-- Platos -->
+              <table>
+                <thead><tr><th>Plato</th><th>Precio</th></tr></thead>
+                <tbody>
+                  <tr><td>Taco (Pollo/Carnita)</td><td>$1.75</td></tr>
+                  <tr><td>Burrito</td><td>$4.50</td></tr>
+                  <tr><td>Nachos con Queso</td><td>$4.25</td></tr>
+                  <tr><td>Nachos Locos</td><td>$6.50</td></tr>
+                  <tr><td>Chalupas</td><td>$3.50</td></tr>
+                  <tr><td>Yuquitas o Papitas</td><td>$1.50</td></tr>
+                  <tr><td>Refresco / Agua</td><td>$1.25</td></tr>
+                  <tr><td><strong>Spicy Crab Tacos</strong></td><td>3x $6.50 | 1x $2.50</td></tr>
+                  <tr><td><strong>Spicy Crab Nachos</strong></td><td>$7.75</td></tr>
+                </tbody>
+              </table>
+
+              <!-- Salsas -->
+              <table>
+                <thead><tr><th colspan="2">Salsas</th></tr></thead>
+                <tbody>
+                  <tr><td>Coco</td><td>Spicy Mango</td></tr>
+                  <tr><td>Guava</td><td>Órale</td></tr>
+                  <tr><td>Cilantro 'n Lime</td><td>Verde</td></tr>
+                  <tr><td colspan="2">Chipotle</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="note">*** Todos los combos incluyen yuquitas o papitas + bebida | Steak costo adicional ***</p>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERÍa -->
+    <section class="galeria">
+      <h2>Ofertas:</h2>
+      <div class="galeria-grid">
+        <img src="img/oferta-burritos.jpg" alt="Burritos a 4 dolares" class="galeria-img" loading="lazy">
+        <img src="img/ofertas-taco.jpg" alt="4 tacos por 6 dolares" class="galeria-img" loading="lazy">
+        <img src="img/ofertas-chalupas.jpg" alt="Chalupas en especial" class="galeria-img" loading="lazy">
+        <img src="img/horarios.jpg" alt="Horarios de negocio" class="galeria-img" loading="lazy">
+      </div>
+    </section>
+
+    <!-- UBICACIÓN -->
+    <section class="ubicacion">
+      <h2>📍¿Dónde estamos?</h2>
+      <p>Encuéntranos en la Carr. 107, <strong>Aguadilla, PR</strong></p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15137.642328860346!2d-67.15901288731287!3d18.465052276130322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c02bd6fc8149d85%3A0xfe0d58535c48cf57!2sTaqu%C3%ADsimo!5e0!3m2!1sen!2sus!4v1752028927199!5m2!1sen!2sus" loading="lazy" allowfullscreen style="border:0;"></iframe>
+      <p class="map-note">¡Ven a visitarnos y disfruta de nuestros deliciosos tacos y burritos!</p>
+    </section>
+
+    <!-- REDES SOCIALES -->
+    <section class="redes">
+      <h2>¡Síguenos en redes sociales!</h2>
+      <div class="icon-links">
+        <a href="https://www.instagram.com/taquisimopr" class="icon ig" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/taquisimopr" class="icon fb" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Taquísimo. Made by Norvak&copy; | 2025</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

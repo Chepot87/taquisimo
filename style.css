@@ -1,0 +1,400 @@
+/* ======================================
+   GLOBAL STYLES
+   Estilos generales que se aplican a toda la página
+====================================== */
+body {
+  margin: 0;
+  background-color: #fff8f0;
+  color: #333;
+  text-align: center;
+  background-image: url('https://cdn.imgpile.com/f/aeDpKxE_xl.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h1, h2, h3 {
+  font-family: 'Chewy', cursive;
+  font-size: 2.5em;
+}
+
+body, p, td {
+  font-family: 'Arial', sans-serif;
+}
+
+/* ======================================
+   BOTONES GENERALES (Ordena Ya y Menú)
+====================================== */
+.btn {
+  background-color: #ff6b35;
+  color: white;
+  padding: 18px 32px;
+  border: none;
+  text-decoration: none;
+  font-size: 1.8em;
+  border-radius: 10px;
+  margin-top: 20px;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  background-color: #e25420;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ======================================
+   HERO SECTION
+   Sección de bienvenida con logo y botón
+====================================== */
+.hero {
+  text-align: center;
+  color: white;
+  padding: 75px 20px;
+  background-color: rgba(32, 226, 28, 0.806);
+}
+
+.hero .logo {
+  width: 380px;
+  border-radius: 50%;
+}
+
+.hero-content h1 {
+  font-size: 5em;
+  margin: 10px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+  font-size: 2.5em;
+  color: black;
+  margin: 20px 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* ======================================
+   SHARED SECTION BACKGROUND (Promos & Galeria)
+====================================== */
+.promos,
+.galeria {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: rgba(255, 248, 240, 0.78);
+}
+
+.promos h2,
+.galeria h2 {
+  font-size: 2.2em;
+  color: #ff6b35;
+  margin-bottom: 30px;
+}
+
+/* ======================================
+   PROMOCIONES - Tarjetas animadas
+====================================== */
+.promo-card {
+  background: #ffe9d6;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 400px;
+  border: 3px solid #ff6b35;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.promo-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.promo-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid #ff6b35;
+}
+
+/* ======================================
+   GALERÍA DE IMÁGENES - Cuadrícula animada
+====================================== */
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.galeria-grid img {
+  width: 100%;
+  border-radius: 12px;
+  border: 3px solid #ff6b35;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ======================================
+   MENÚ POP-UP - Modal
+====================================== */
+.menu-popup {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  background-color: #fffaf3;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+  width: 800px;
+  position: relative;
+  animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #ff6b35;
+}
+
+/* ======================================
+   MENÚ TABLES - Tablas de combos y platos
+====================================== */
+.menu-table {
+  padding: 40px 20px;
+  background-color: #fffaf3;
+  text-align: center;
+  background-image: url('https://i.postimg.cc/9MsdBBVp/background.png');
+}
+
+.menu-table h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #ff6b35;
+}
+
+.table-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 300px;
+  background: white;
+  border: 2px solid #ff6b35;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #ffe2cc;
+  text-align: left;
+}
+
+thead th {
+  background-color: #ff6b35;
+  color: white;
+  text-align: center;
+}
+
+.note {
+  margin-top: 30px;
+  font-style: italic;
+  color: #555;
+}
+
+/* ======================================
+   REDES SOCIALES - Íconos animados
+====================================== */
+.redes {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fff3e6a3;
+}
+
+.redes h2 {
+  color: #ff6b35;
+  font-size: 2em;
+  margin-bottom: 25px;
+}
+
+.icon-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.icon {
+  font-size: 2.5em;
+  color: white;
+  padding: 20px;
+  border-radius: 30%;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon i {
+  font-size: 1.5em;
+}
+
+.icon:hover {
+  transform: scale(1.2) rotate(5deg);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.icon.ig {
+  background-color: #ee2a7b;
+}
+
+.icon.fb {
+  background-color: #1877f2;
+}
+
+/* ======================================
+   EFECTO DE APARICIÓN SUAVE
+====================================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ======================================
+   FOOTER
+====================================== */
+footer {
+  background-color: rgba(32, 226, 28, 0.806);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ======================================
+   ANIMACIÓN DE CIERRE PARA MODAL
+====================================== */
+.fade-out {
+  animation: fadeOut 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* ======================================
+   UBICACIÓN - Mapa estilo tarjeta
+====================================== */
+.ubicacion {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fffaf3;
+  background-image: url('https://i.postimg.cc/9MsdBBVp/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ubicacion h2 {
+  font-size: 2.2em;
+  color: #ff6b35;
+  margin-bottom: 10px;
+}
+
+.ubicacion p {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+}
+
+.ubicacion iframe {
+  width: 100%;
+  max-width: 800px;
+  height: 300px;
+  border: 3px solid #ff6b35;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ubicacion iframe:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.map-note {
+  margin-top: 20px;
+  font-style: italic;
+  color: #555;
+}
