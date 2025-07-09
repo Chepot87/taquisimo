@@ -1,39 +1,35 @@
-// ==============================
-// MODAL DEL MENÚ (POP-UP)
-// ==============================
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("menu-modal");
+  const openBtn = document.getElementById("open-menu");
+  const closeBtn = document.querySelector(".close");
 
-const modal = document.getElementById("menu-modal");
-const openBtn = document.getElementById("open-menu");
-const closeBtn = document.querySelector(".close");
-
-// Abrir el modal
-openBtn.addEventListener("click", () => {
-  modal.classList.remove("fade-out"); // por si se cerró antes
-  modal.style.display = "block";
-});
-
-// Cerrar con botón (X)
-closeBtn.addEventListener("click", closeModal);
-
-// Cerrar con clic fuera del contenido
-window.addEventListener("click", (event) => {
-  if (event.target === modal) {
-    closeModal();
+  if (!modal || !openBtn || !closeBtn) {
+    console.warn("⚠️ Algún elemento del modal no fue encontrado.");
+    return;
   }
-});
 
-// Cerrar con tecla ESC
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && modal.style.display === "block") {
-    closeModal();
-  }
-});
-
-// Función para cerrar el modal con animación
-function closeModal() {
-  modal.classList.add("fade-out");
-  setTimeout(() => {
-    modal.style.display = "none";
+  openBtn.addEventListener("click", () => {
     modal.classList.remove("fade-out");
-  }, 300); // mismo tiempo que la animación CSS
-}
+    modal.style.display = "block";
+  });
+
+  closeBtn.addEventListener("click", closeModal);
+
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.style.display === "block") {
+      closeModal();
+    }
+  });
+
+  function closeModal() {
+    modal.classList.add("fade-out");
+    setTimeout(() => {
+      modal.style.display = "none";
+      modal.classList.remove("fade-out");
+    }, 300);
+  }
+});
